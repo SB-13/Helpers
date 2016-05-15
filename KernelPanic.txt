@@ -1,0 +1,16 @@
+If you get an error that looks like the following:
+
+Kernel panic-not syncing: VFS: unable to mount root fs on unkown-block(179,2)
+
+do the following to fix it:
+
+1. Start the Raspberry Pi holding the Shift key
+2. Click the Edit config(e) button or press e.
+3. Click the cmdline.txt tab or press the right arrow on the keyboard
+4. Replace 
+	root=/dev/mmcblk0p2
+   With
+	root=/dev/mmcblk0p6
+5. Click OK and then press escape on the keyboard to proceed with the boot sequence.
+
+This error was most likely caused by an update bug. The above will fix it. 
